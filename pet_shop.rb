@@ -34,7 +34,7 @@ def stock_count(pet_shop)
 end
 
 
-# Test 8
+# Test 8 & 9
 def pets_by_breed(pet_shop, input_breed)
   pets_array = []
 
@@ -47,3 +47,6 @@ def pets_by_breed(pet_shop, input_breed)
   return pets_array
 
 end
+
+
+# Test 10
