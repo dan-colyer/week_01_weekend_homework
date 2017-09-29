@@ -75,3 +75,9 @@ end
 def add_pet_to_stock(pet_shop, input_name)
   pet_shop[:pets] << { name: input_name }
 end
+
+
+# Test 13
+def customer_pet_count(input_cust)
+  return input_cust[:pets].count
+end
