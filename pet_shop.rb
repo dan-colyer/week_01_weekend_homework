@@ -50,3 +50,10 @@ end
 
 
 # Test 10
+def find_pet_by_name(pet_shop, input_name)
+  for pet in pet_shop[:pets]
+    if (pet[:name] == input_name)
+      return pet
+    end
+  end
+end
