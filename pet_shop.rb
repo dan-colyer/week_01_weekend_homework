@@ -68,5 +68,10 @@ def remove_pet_by_name(pet_shop, input_name)
       pet_shop[:pets].delete(pet)
     end
   end
+end
 
+
+# Test 12
+def add_pet_to_stock(pet_shop, input_name)
+  pet_shop[:pets] << { name: input_name }
 end
