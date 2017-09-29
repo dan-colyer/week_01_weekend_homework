@@ -81,3 +81,10 @@ end
 def customer_pet_count(input_cust)
   return input_cust[:pets].count
 end
+
+
+# Test 14
+def add_pet_to_customer(input_cust, new_pet)
+  input_cust[:pets] << new_pet
+  input_cust[:pets].count
+end
