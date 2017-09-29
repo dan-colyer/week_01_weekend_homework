@@ -49,11 +49,14 @@ def pets_by_breed(pet_shop, input_breed)
 end
 
 
-# Test 10
+# Test 10 & 11
 def find_pet_by_name(pet_shop, input_name)
   for pet in pet_shop[:pets]
     if (pet[:name] == input_name)
       return pet
     end
   end
+
+      return nil
+    
 end
