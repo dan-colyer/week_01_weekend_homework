@@ -96,13 +96,30 @@ def customer_can_afford_pet(input_cust, new_pet)
 end
 
 
-# Test 17
+# # Test 17 & 18
+# def sell_pet_to_customer(pet_shop, pet, input_cust)
+#   input_cust[:pets] << pet #is this right?
+#   input_cust[:pets].count
+#
+#   pet_shop[:admin][:pets_sold] += input_cust[:pets].count
+#
+#   pet_shop[:admin][:total_cash] += pet[:price] #Why does this work for 17?
+#
+# end
+
+# Test 17 & 18
 def sell_pet_to_customer(pet_shop, pet, input_cust)
-  input_cust[:pets] << pet #is this right?
-  input_cust[:pets].count
 
-  pet_shop[:admin][:pets_sold] += input_cust[:pets].count
-
-  pet_shop[:admin][:total_cash] += pet[:price] #Why does this work?
-
+  for x in pet_shop[:pets]
+    if (x == pet)
+      input_cust[:pets] << pet
+      input_cust[:pets].count
+      pet_shop[:admin][:pets_sold] += input_cust[:pets].count
+    end
+  end
+  if (input_cust[:pets].count == 0)
+    pet_shop[:admin][:total_cash]
+  else
+    pet_shop[:admin][:total_cash] += pet[:price]
+  end
 end
