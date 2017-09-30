@@ -94,3 +94,15 @@ end
 def customer_can_afford_pet(input_cust, new_pet)
     return (input_cust[:cash] < new_pet[:price]) ? false : true
 end
+
+
+# Test 17
+def sell_pet_to_customer(pet_shop, pet, input_cust)
+  input_cust[:pets] << pet #is this right?
+  input_cust[:pets].count
+
+  pet_shop[:admin][:pets_sold] += input_cust[:pets].count
+
+  pet_shop[:admin][:total_cash] += pet[:price] #Why does this work?
+
+end
