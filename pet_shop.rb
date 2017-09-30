@@ -90,9 +90,7 @@ def add_pet_to_customer(input_cust, new_pet)
 end
 
 
-# Test 15
+# Test 15 & 16
 def customer_can_afford_pet(input_cust, new_pet)
-    if (input_cust[:cash] < new_pet[:price])
-      false
-    end
+    return (input_cust[:cash] < new_pet[:price]) ? false : true
 end
