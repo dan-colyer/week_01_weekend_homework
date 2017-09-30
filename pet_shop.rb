@@ -88,3 +88,11 @@ def add_pet_to_customer(input_cust, new_pet)
   input_cust[:pets] << new_pet
   input_cust[:pets].count
 end
+
+
+# Test 15
+def customer_can_afford_pet(input_cust, new_pet)
+    if (input_cust[:cash] < new_pet[:price])
+      false
+    end
+end
