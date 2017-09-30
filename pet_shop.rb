@@ -107,11 +107,11 @@ end
 #
 # end
 
-# Test 17 & 18
+# Test 17 & 18 & 19 **** WHY DOES THIS WORK? ****
 def sell_pet_to_customer(pet_shop, pet, input_cust)
 
-  for x in pet_shop[:pets]
-    if (x == pet)
+  for stock in pet_shop[:pets]
+    if (stock == pet) && (((input_cust[:cash] < stock[:price]) ? false : true) == true)
       input_cust[:pets] << pet
       input_cust[:pets].count
       pet_shop[:admin][:pets_sold] += input_cust[:pets].count
